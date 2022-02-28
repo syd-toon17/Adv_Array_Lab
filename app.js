@@ -164,13 +164,41 @@ console.log("Big Serving Italian Foods: ", italianFood)
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
 
+function findEqualServing(){
+    let results = dishes.filter(function(el){
+        if(el.servings ===  el.id){
+            return true;
+        }
+        else{
+            return false;
+        }})
 
+    return results;
+}
+let equalFoods = findEqualServing();
+console.log("Serving Equals id Foods: ", equalFoods)
 
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
 
+function findEvenFood(){
+    let results = dishes.filter(function(el){
+        if(el.servings % 2 === 0 ){
+            return true;
+        }
+        else{
+            return false;
+        }})
+
+    return results;
+}
+let evenFood = findEvenFood();
+console.log("Even Serving Foods: ", evenFood)
+
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
+
+
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
